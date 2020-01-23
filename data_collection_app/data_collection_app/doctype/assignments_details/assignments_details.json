@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "creation": "2020-01-16 10:43:59.071605",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assignment",
+  "shop",
+  "assignment_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "assignment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assignment",
+   "options": "Assignments",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Shops",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "assignment.description",
+   "fieldname": "assignment_name",
+   "fieldtype": "Read Only",
+   "label": "Name"
+  }
+ ],
+ "links": [],
+ "modified": "2020-01-16 18:49:48.136940",
+ "modified_by": "opsadmin@email.com",
+ "module": "Data Collection App",
+ "name": "Assignments Details",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Ops Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Field Users",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "assignment_name",
+ "track_changes": 1
+}

@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "creation": "2020-01-16 00:01:00.942830",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assignment",
+  "location",
+  "assignment_location"
+ ],
+ "fields": [
+  {
+   "fieldname": "assignment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assignment",
+   "options": "Assignments",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "location.location_name",
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Location",
+   "options": "Locations",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "assignment.description",
+   "fetch_if_empty": 1,
+   "fieldname": "assignment_location",
+   "fieldtype": "Read Only",
+   "label": "Name",
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2020-01-16 18:33:26.303548",
+ "modified_by": "opsadmin@email.com",
+ "module": "Data Collection App",
+ "name": "Assignment Locations",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Ops Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Field Users",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "assignment_location",
+ "track_changes": 1
+}

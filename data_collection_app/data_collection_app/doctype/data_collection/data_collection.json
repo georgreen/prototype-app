@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "creation": "2020-01-16 10:48:45.472614",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assignment",
+  "created_at",
+  "update_at",
+  "version",
+  "assignment_description",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "assignment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assignment",
+   "options": "Assignments",
+   "reqd": 1
+  },
+  {
+   "fieldname": "created_at",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Created At",
+   "reqd": 1
+  },
+  {
+   "fieldname": "update_at",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Updated At",
+   "reqd": 1
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Version",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "assignment.description",
+   "fieldname": "assignment_description",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Submitted\nOngoing\nRejected\nAccepted\nRedo",
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2020-01-16 20:43:15.233778",
+ "modified_by": "opsadmin@email.com",
+ "module": "Data Collection App",
+ "name": "Data Collection",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Ops Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Field Users",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "assignment_description",
+ "track_changes": 1
+}

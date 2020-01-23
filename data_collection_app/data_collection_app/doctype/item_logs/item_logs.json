@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "creation": "2020-01-16 10:59:22.272983",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_item",
+  "entry",
+  "log_name",
+  "unit_sold",
+  "unit_price"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop Item",
+   "options": "Shop Items",
+   "reqd": 1
+  },
+  {
+   "fieldname": "entry",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Entry",
+   "options": "Entries",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop_item.item_name",
+   "fetch_if_empty": 1,
+   "fieldname": "log_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "entry.units_sold",
+   "fieldname": "unit_sold",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Units Sold",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "entry.unit_price",
+   "fieldname": "unit_price",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Unit Price",
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2020-01-16 21:03:37.426099",
+ "modified_by": "opsadmin@email.com",
+ "module": "Data Collection App",
+ "name": "Item Logs",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Ops Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Field Users",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "log_name",
+ "track_changes": 1
+}
